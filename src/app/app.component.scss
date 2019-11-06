@@ -1,8 +1,39 @@
 .main-page {
+  .event-entry-page {
     width: 100vw;
     height: 100vh;
     background-color: red;
-    h1 {
-        margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    .background {
+      width: 100%;
     }
+    .tedx-logo-white {
+      width: 13rem;
+    }
+    .event-entry {
+        position: relative;
+      .slogon-text {
+        h1 {
+          margin: 0;
+        }
+      }
+      .tedx-event {
+        img {
+width: 5rem;
+        };
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+  .tedx-introduce-page {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: auto 100vh;
+    background-image: url("../assets/background-mainpage.png");
+  }
 }
