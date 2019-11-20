@@ -1,3 +1,4 @@
+// @import "../../node_modules/swiper/dist/css/swiper.min.css";
 .main-page {
   .event-entry-page {
     width: 100vw;
@@ -14,7 +15,7 @@
       width: 13rem;
     }
     .event-entry {
-        position: relative;
+      position: relative;
       .slogon-text {
         h1 {
           margin: 0;
@@ -22,8 +23,8 @@
       }
       .tedx-event {
         img {
-width: 5rem;
-        };
+          width: 5rem;
+        }
         position: absolute;
         top: 0;
       }
@@ -35,5 +36,65 @@ width: 5rem;
     background-repeat: no-repeat;
     background-size: auto 100vh;
     background-image: url("../assets/background-mainpage.png");
+    display: flex;
+    flex-direction: column;
+    .introduce-title {
+        height: 7rem;
+        width: 100%;
+    }
+  }
+}
+
+.swiper-slide {
+  display: flex;
+  .first-slide,
+  .last-slide {
+    width: 3rem;
+    height: 100%;
+    background: transparent;
+  }
+  .text {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    background: red;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+// .swiper-slide:nth-child(2n) {
+//   width: 60%;
+// }
+// .swiper-slide:nth-child(3n) {
+//   width: 40%;
+// }
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-pagination {
+  position: unset;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .swiper-pagination-bullet {
+    background: white;
+    opacity: 0.5;
+    border-radius: unset;
+  }
+  .swiper-pagination-bullet-active {
+    width: 50px;
+    height: 6px;
+    border-radius: unset;
+    background: white;
+    opacity: 1;
   }
 }
