@@ -1,0 +1,17 @@
+<div class="navbar" (click)="sideNav.toggle()" [class.opened]="sideNav.opened">
+  <div class="title"></div>
+  <div class="baricon"></div>
+</div>
+<mat-sidenav-container class="navbar-container">
+  <mat-sidenav #sideNav mode="side" opened="false" position="end">
+    <div class="nav-content">
+      <div class="title-imag"></div>
+        <div class="nav-item" *ngFor="let item of navList">
+        {{ item }}
+      </div>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
