@@ -1,0 +1,50 @@
+.contactus {
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-image: url("../../../assets/背景@2x.png");
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .QR-code {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    .wechat {
+      margin-top: 3rem;
+      width: 5rem;
+      height: 5rem;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      background-image: url("../../../assets/官方微信号.jpeg");
+    }
+    .official-wechat {
+      width: 5rem;
+      height: 5rem;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      background-image: url("../../../assets/官方公众号.jpeg");
+    }
+    .title {
+      color: white;
+      font-size: 0.8rem;
+      margin: 1rem 0rem 2rem 0rem;
+    }
+  }
+}

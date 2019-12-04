@@ -1,0 +1,79 @@
+.eventpartner {
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-image: url("../../../assets/背景@2x.png");
+  background-color: black;
+  display: flex;
+}
+.backgroud-red-x-mask {
+  top: 0;
+  background: transparent;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-image: url("../../../assets/x@2x.png");
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+
+  .partner-container {
+    @media (max-width: 320px) {
+      height: 31.5rem;
+    }
+    animation-name: fadeIn;
+    animation-delay: 0.5s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    width: calc(100% - 2rem);
+    height: 35rem;
+    background: white;
+    margin-top: 3rem;
+    opacity: 0;
+    .official-partner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .partner-title {
+      }
+      .partner-logo {
+        display: flex;
+        width: 100%;
+        .logo-container {
+          @media (max-width: 320px) {
+            height: 2rem;
+          }
+          height: 2.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          margin: 0.5rem;
+          padding: 0.4rem;
+          border: solid 1px black;
+          img {
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+      }
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

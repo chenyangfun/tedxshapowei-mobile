@@ -12,7 +12,7 @@ html {
     -ms-overflow-style: none;
     // height: 100%;
     // width: calc(100vw + 18px);
-    overflow: auto;
+    overflow: hidden;
   }
   
   .main-page {
@@ -43,7 +43,7 @@ html {
         }
         .tedx-event {
           img {
-            width: 5rem;
+            width: 8rem;
           }
           position: absolute;
           top: 0;

@@ -12,8 +12,9 @@ export class HomeComponent {
   aboutTedSwiper: Swiper;
   mainPageTedSwiper: Swiper;
   public slides = ["First slide", "Second slide", "Third slide"];
-
-  constructor(private ref: ChangeDetectorRef) {}
+  public windowInnerHeight = window.innerHeight;
+  constructor(private ref: ChangeDetectorRef) {
+  }
   ngAfterViewInit() {
     this.aboutTedSwiper = new Swiper(".swiper-container", {
       // 如果需要分页器
@@ -24,13 +25,11 @@ export class HomeComponent {
       centeredSlides: true,
       loop: true,
       autoplay: false,
-      // slidesOffsetBefore : 100,
       slidesOffsetAfter: 100
     });
     this.mainPageTedSwiper = new Swiper(".main-page-swiper-container", {
       direction: "vertical",
-      width: window.innerWidth,
-      height: window.innerHeight
+      height: this.windowInnerHeight
     });
   }
 }

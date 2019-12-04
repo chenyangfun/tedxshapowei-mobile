@@ -1,0 +1,80 @@
+.eventteam {
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-image: url("../../../assets/背景@2x.png");
+  background-color: black;
+  display: flex;
+}
+.backgroud-red-50-x-mask {
+  top: 0;
+  background: transparent;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-image: url("../../../assets/装饰1@2x.png");
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  justify-content: center;
+  display: flex;
+  .team-introduce-container {
+    animation-name: fadeIn;
+    animation-delay: 0.5s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    margin-top: 3rem;
+    background: rgb(0, 0, 0, 0.3);
+    width: 90%;
+    height: fit-content;
+    .team-container {
+      display: flex;
+      width: 100%;
+      .team-introduce {
+        display: flex;
+        width: 50%;
+        .team-photo {
+          @media (max-width: 320px) {
+            width: 3.7rem;
+          }
+          width: 4.3rem;
+          img {
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+        .team-text {
+            margin-left: 0.6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          color: white;
+          .title {
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+          }
+          .name {
+            font-size: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

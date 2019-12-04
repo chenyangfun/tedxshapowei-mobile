@@ -1,13 +1,51 @@
-<div class="navbar" (click)="sideNav.toggle()" [class.opened]="sideNav.opened">
+<div
+  class="navbar"
+  (click)="sideNav.toggle()"
+  [class.redLogo]="sideNav.opened || redLogoTitle"
+>
   <div class="title"></div>
   <div class="baricon"></div>
 </div>
 <mat-sidenav-container class="navbar-container">
   <mat-sidenav #sideNav mode="side" opened="false" position="end">
     <div class="nav-content">
-      <div class="title-imag"></div>
-        <div class="nav-item" *ngFor="let item of navList">
-        {{ item }}
+      <div class="title-imag">
+          <img src="assets/选择@2x.png" alt="" />
+      </div>
+      <div
+        class="nav-item"
+        [routerLink]="['/refresh2018/eventreview']"
+        (click)="sideNav.toggle(); this.redLogoTitle = true"
+      >
+        大会回顾
+      </div>
+      <div
+        class="nav-item"
+        [routerLink]="['/refresh2018/eventvideo']"
+        (click)="sideNav.toggle(); this.redLogoTitle = true"
+      >
+        演讲视频
+      </div>
+      <div
+        class="nav-item"
+        [routerLink]="['/refresh2018/eventteam']"
+        (click)="sideNav.toggle(); this.redLogoTitle = true"
+      >
+        团队介绍
+      </div>
+      <div
+        class="nav-item"
+        [routerLink]="['/refresh2018/eventpartner']"
+        (click)="sideNav.toggle()"
+      >
+        合作伙伴
+      </div>
+      <div
+        class="nav-item"
+        [routerLink]="['/refresh2018/contactus']"
+        (click)="sideNav.toggle(); this.redLogoTitle = true"
+      >
+        联系我们
       </div>
     </div>
   </mat-sidenav>

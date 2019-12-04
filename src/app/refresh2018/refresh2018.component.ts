@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-refresh2018',
@@ -6,10 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./refresh2018.component.scss']
 })
 export class Refresh2018Component implements OnInit {
-
+  redLogoTitle = false;
   constructor() { }
-  navList = ["大会回顾","视频演讲","团队介绍","合作伙伴","联系我们"]
   ngOnInit() {
   }
-
 }
