@@ -13,8 +13,8 @@ export class HomeComponent {
   mainPageTedSwiper: Swiper;
   public slides = ["First slide", "Second slide", "Third slide"];
   public windowInnerHeight = window.innerHeight;
-  constructor(private ref: ChangeDetectorRef) {
-  }
+  showAboutTed = false;
+  constructor(private ref: ChangeDetectorRef) {}
   ngAfterViewInit() {
     this.aboutTedSwiper = new Swiper(".swiper-container", {
       // 如果需要分页器
