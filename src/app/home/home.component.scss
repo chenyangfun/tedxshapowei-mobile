@@ -40,7 +40,7 @@ body {
     .event-entry {
       position: relative;
       .slogon-text {
-        width: 100vw;
+        width: 100%;
         text-align: center;
         opacity: 0;
         letter-spacing: 0.8rem;
@@ -69,7 +69,7 @@ body {
         top: 4.3rem;
       }
       .tedx-event {
-        width: 100vw;
+        width: 100%;
         text-align: center;
         opacity: 0;
         animation-name: fadeIn;
@@ -110,8 +110,8 @@ body {
     top: 0;
     transform: translateY(100%);
     height: 100%;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
+    // background-repeat: no-repeat;
+    // background-size: auto 100%;
     background-image: url("../../assets/background-mainpage.png");
     display: flex;
     flex-direction: column;
