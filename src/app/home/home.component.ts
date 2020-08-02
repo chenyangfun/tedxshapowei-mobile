@@ -14,6 +14,7 @@ export class HomeComponent {
   public slides = ["First slide", "Second slide", "Third slide"];
   public windowInnerHeight = window.innerHeight;
   showAboutTed = false;
+  showHome = false;
   constructor(private ref: ChangeDetectorRef) {}
   ngAfterViewInit() {
     this.aboutTedSwiper = new Swiper(".swiper-container", {

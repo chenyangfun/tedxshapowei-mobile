@@ -1,59 +1,24 @@
 <div class="main-page">
-  <!-- <div class="main-page-swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="event-entry-page">
-          <img
-            class="tedx-logo-white"
-            src="assets/tedx-logo-white.png"
-            alt=""
-          />
-          <img class="background" src="assets/tedx-mainpage.png" alt="" />
-          <div class="event-entry">
-            <div class="slogon-text slogon-one">
-              <div class="black-slogon">传播</div>
-              <div class="white-slogon">新知</div>
-            </div>
-            <div class="slogon-text slogon-tow">
-              <div class="black-slogon">拥抱</div>
-              <div class="white-slogon">未来</div>
-            </div>
-            <div class="tedx-event">
-              <div [routerLink]="['/refresh2018']" class="refresh-event">
-                <img class="refresh" src="assets/refresh.png" alt="" />
-              </div>
-            </div>
-          </div>
-          <button class="about-ted">关于ted</button>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="tedx-introduce-page">
-          <div class="introduce-title">123</div>
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="first-slide"></div>
-                <div class="text">1</div>
-              </div>
-              <div class="swiper-slide">
-                <div class="text">2</div>
-              </div>
-              <div class="swiper-slide">
-                <div class="text">3</div>
-                <div class="last-slide"></div>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
+  <div class="navbar">
+    <div class="title" [class.transparent-title]="showAboutTed"></div>
+  </div>
   <div class="event-entry-page">
     <img class="tedx-logo-white" src="assets/tedx-logo-white.png" alt="" />
-    <img class="background" src="assets/tedx-mainpage.png" alt="" />
-    <div class="event-entry">
+    <div class="two-hover-ball">
+      <div class="hover-ball">
+        <div class="ball">
+          厦门
+        </div>
+      </div>
+      <div class="hover-ball">
+        <div class="ball">
+          沙坡尾
+        </div>
+      </div>
+      <div class="long-doshed"></div>
+      <div class="small-ball"></div>
+    </div>
+    <div class="event-slogon">
       <div class="slogon-text slogon-one">
         <div class="black-slogon">传播</div>
         <div class="white-slogon">新知</div>
@@ -62,27 +27,87 @@
         <div class="black-slogon">拥抱</div>
         <div class="white-slogon">未来</div>
       </div>
-      <div class="tedx-event">
-        <div [routerLink]="['/refresh2018']" class="refresh-event">
-          <img class="refresh" src="assets/refresh.png" alt="" />
-        </div>
+    </div>
+    <div class="event-entry">
+      <img
+        [routerLink]="['/refresh2018']"
+        class="event-item refresh"
+        src="assets/refresh.png"
+        alt=""
+      />
+
+      <div class="event-title">
+        refresh - 焕
+        <br />
+        2018
       </div>
     </div>
-    <button class="about-ted" (click)="showAboutTed=true">关于ted</button>
+    <button
+      class="about-ted-button"
+      (click)="showAboutTed = true; showHome = false"
+    >
+      <div>关于TED</div>
+      <div class="triangle-down"></div>
+    </button>
   </div>
-  <div class="tedx-introduce-page" [class.show]="showAboutTed">
-    <div class="introduce-title">123</div>
+  <div
+    class="tedx-introduce-page"
+    [class.show]="showAboutTed"
+    [class.not-show]="showHome"
+  >
+    <button
+      class="back-home-button"
+      (click)="showAboutTed = false; showHome = true"
+    >
+      <div>大会入口</div>
+      <div class="triangle-up"></div>
+    </button>
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="first-slide"></div>
-          <div class="text">1</div>
+
+          <div class="text">
+            <div class="title">TED</div>
+            <div class="content">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TED
+              是一个致力于“传播有价值的思想”的非营利组织，总部设立于美国纽约。
+              1984年 TED 大会在加州第一次举办，在 TED
+              大会上，全世界各行各业的思想家和行动家在18分钟之内进行精彩的演讲。
+              TED.com 将 TED 大会上最优秀的演讲放到网站上供全世界免费观看。
+              每年的 TED
+              大奖都会将100万美金奖励颁发给一位拥有改变世界的卓越想法的人才。
+              TED 伙伴计划帮助全球那些致力于改变世界的创新者成为 TED
+              社区的成员，并帮助他们来提升项目和活动的影响力。
+            </div>
+          </div>
         </div>
         <div class="swiper-slide">
-          <div class="text">2</div>
+          <div class="text">
+            <div class="title">TED</div>
+            <div class="content">
+              &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;TEDx
+              活动，是由TED官网授权全世界来自不同国家的人在当地社区邀请演讲人组织类似
+              TED 形式的活动 “x”即是独立组织之意。TED 为 TEDx
+              活动提供总的指导原则，但这些 TEDx 活动完全是自行组织的，并要遵守
+              TED 的相关规则 秉持着TED
+              “传播有价值的思想”的理念，TEDx活动旨在通过策划组织在科技、教育和设计等领域的演讲盛宴，触发演讲者和听众之间深入的交流和联系。
+            </div>
+          </div>
         </div>
         <div class="swiper-slide">
-          <div class="text">3</div>
+          <div class="text">
+            <div class="title">TEDx沙坡尾</div>
+            <div class="content">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEDxShapowei
+              于2018年3月20日获得 TED
+              美国总部审批，是可接待100名观众规模的Standard Event TEDx
+              沙坡尾社区由一群厦门本地热爱TED精神及优秀思想的伙伴于2017年组织成立，并以非营利组织的方式独立运营
+              TEDxShapowei
+              着重关注科技、教育和发展领域，致力整合线上和线下手段打造厦门本地创新型社区
+              立足当下，着眼未来，我们希望通过激发灵感以帮助更多青年提升自我，同时用创新思维解决身边的问题，推动社会进步。
+            </div>
+          </div>
           <div class="last-slide"></div>
         </div>
       </div>

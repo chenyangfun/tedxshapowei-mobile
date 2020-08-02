@@ -17,6 +17,33 @@ body {
 
 .main-page {
   height: 100%;
+  .navbar {
+    width: 100%;
+    height: 3rem;
+    background: transparent;
+    position: absolute;
+    z-index: 100;
+    .title {
+      opacity: 0;
+      height: 1.5rem;
+      margin-top: 0.8rem;
+      margin-left: 0.8rem;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      background-image: url("../../assets/logo反白使用-红@2x.png");
+      &.transparent-title {
+        animation: fadeInLogo 0.5s 0.3s ease-out forwards;
+        @keyframes fadeInLogo {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
   .swiper-slide {
     width: 100%;
     height: 100%;
@@ -24,21 +51,98 @@ body {
   .event-entry-page {
     // width: 100%;
     height: 100%;
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    .background {
-      margin-top: 8rem;
-      width: 100%;
-    }
+    background: red url("../../assets/tedx-mainpage.png") center 48% no-repeat;
+    background-size: 100%;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: space-around;
     .tedx-logo-white {
+      position: absolute;
+      left: 50%;
+      top: 1rem;
+      transform: translate(-50%, 0%);
       margin-top: 2rem;
-      width: 13rem;
+      width: 14.5rem;
     }
-    .event-entry {
-      position: relative;
+    .two-hover-ball {
+      position: absolute;
+      left: 46%;
+      top: 21%;
+      transform: translate(-50%, 0%);
+      .hover-ball {
+        opacity: 0;
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        animation-delay: 2.8s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        border-radius: 50%;
+        border: dashed 1px white;
+        width: 4rem;
+        height: 4rem;
+        background: transparent;
+        .ball {
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+          background: #ff8169;
+          margin: 0.5rem;
+          text-align: center;
+          font-size: 1rem;
+          line-height: 3rem;
+          font-size: 1.1rem;
+          color: white;
+        }
+        &:nth-child(2) {
+          opacity: 0;
+          animation-name: fadeIn;
+          animation-duration: 1s;
+          animation-delay: 3s;
+          animation-timing-function: ease-out;
+          animation-fill-mode: forwards;
+          position: absolute;
+          top: 2.1rem;
+          left: 3rem;
+          .ball {
+            font-size: 0.9rem;
+          }
+        }
+      }
+      .long-doshed {
+        opacity: 0;
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        animation-delay: 3s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        width: 0rem;
+        height: 3rem;
+        border-right: dashed 1px white;
+        position: absolute;
+        top: 6.2rem;
+        left: 5rem;
+      }
+      .small-ball {
+        opacity: 0;
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        animation-delay: 3s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        width: 0.5rem;
+        height: 0.5rem;
+        background: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 9.2rem;
+        left: 4.8rem;
+      }
+    }
+    .event-slogon {
+      width: 100%;
+      position: absolute;
+      top: 50%;
       .slogon-text {
         width: 100%;
         text-align: center;
@@ -68,21 +172,6 @@ body {
         position: absolute;
         top: 4.3rem;
       }
-      .tedx-event {
-        width: 100%;
-        text-align: center;
-        opacity: 0;
-        animation-name: fadeIn;
-        animation-duration: 1s;
-        animation-delay: 2.5s;
-        animation-timing-function: ease-out;
-        animation-fill-mode: forwards;
-        img {
-          width: 8rem;
-        }
-        // position: absolute;
-        // top: 0;
-      }
       @keyframes fadeIn {
         0% {
           opacity: 0;
@@ -102,6 +191,53 @@ body {
         }
       }
     }
+    .event-entry {
+      opacity: 0;
+      animation-name: fadeIn;
+      animation-duration: 1s;
+      animation-delay: 2.5s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+      position: absolute;
+      left: 50%;
+      bottom: 6rem;
+      img {
+        box-shadow: 0px 3px 25px #000;
+      }
+      .event-item {
+        transform: translate(-50%, 0%);
+        height: 16rem;
+      }
+      .event-title {
+        color: white;
+        text-align: center;
+        transform: translate(-50%, 0%);
+      }
+    }
+    .about-ted-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      border: none;
+      border-radius: 2rem;
+      font-size: 0.8rem;
+      height: 1.8rem;
+      width: 5.5rem;
+      color: red;
+      font-weight: 500;
+      position: absolute;
+      left: 50%;
+      bottom: 2rem;
+      transform: translate(-50%, 0%);
+      .triangle-down {
+        width: 0;
+        height: 0;
+        border-left: 0.3rem solid transparent;
+        border-right: 0.3rem solid transparent;
+        border-top: 0.5rem solid red;
+      }
+    }
   }
   .tedx-introduce-page {
     // width: 100%;
@@ -116,7 +252,7 @@ body {
     display: flex;
     flex-direction: column;
     &.show {
-      animation: abountTedfadeIn 2s ease-in-out forwards;
+      animation: abountTedfadeIn 0.5s ease-in-out forwards;
       @keyframes abountTedfadeIn {
         0% {
           transform: translateY(100%);
@@ -126,9 +262,37 @@ body {
         }
       }
     }
-    .introduce-title {
-      height: 7rem;
-      width: 100%;
+    &.not-show {
+      animation: abountTedfadeOut 2s ease-in-out forwards;
+      @keyframes abountTedfadeOut {
+        0% {
+          transform: translateY(0%);
+        }
+        100% {
+          transform: translateY(1000%);
+        }
+      }
+    }
+    .back-home-button {
+      align-self: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 3rem 0 2rem;
+      background: white;
+      border: none;
+      border-radius: 2rem;
+      font-size: 0.8rem;
+      height: 1.8rem;
+      width: 5.5rem;
+      font-weight: 500;
+      .triangle-up {
+        width: 0;
+        height: 0;
+        border-left: 0.3rem solid transparent;
+        border-right: 0.3rem solid transparent;
+        border-bottom: 0.5rem solid black;
+      }
     }
     .swiper-slide {
       display: flex;
@@ -141,13 +305,18 @@ body {
       .text {
         width: 100%;
         height: 100%;
-        text-align: center;
-        font-size: 18px;
         background: red;
-        /* Center slide text vertically */
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        color: white;
+        .title {
+          text-align: center;
+          font-size: 2rem;
+          font-weight: 600;
+          margin: 1rem;
+        }
+        .content {
+          margin: 1rem 2rem;
+          font-size: 1rem;
+        }
       }
     }
     // .swiper-slide:nth-child(2n) {
